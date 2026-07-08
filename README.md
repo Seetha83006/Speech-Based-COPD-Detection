@@ -1,20 +1,28 @@
 # Speech-Based-COPD-Detection
 
-# Speech-Based COPD Detection using Machine Learning
-
 ## Project Pipeline
 
 ```mermaid
 flowchart TD
-    A[Speech Recordings] --> B[Audio Preprocessing]
-    B --> C[Feature Extraction<br/>OpenSMILE (eGeMAPS)]
-    C --> D[Feature Selection<br/>Recursive Feature Elimination (RFE)]
-    D --> E[Machine Learning Models]
-    E --> F[SVM (Linear & RBF)]
-    E --> G[Random Forest]
-    F --> H[COPD Prediction]
+    A[Speech Recordings]
+    B[Audio Preprocessing]
+    C[Feature Extraction - OpenSMILE eGeMAPS]
+    D[Feature Selection - RFE]
+    E[Machine Learning Models]
+    F[SVM Linear and RBF]
+    G[Random Forest]
+    H[COPD Prediction]
+    I[Performance Evaluation]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    F --> H
     G --> H
-    H --> I[Performance Evaluation<br/>Accuracy • ROC-AUC • LOSO • Stratified K-Fold]
+    H --> I
 ```
 
 Machine learning approach for non-invasive COPD detection using sustained vowel speech recordings.
